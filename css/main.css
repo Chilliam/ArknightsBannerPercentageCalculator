@@ -1,43 +1,110 @@
+/* Layout */
 body {
-    margin: 60px auto;
-    width: 70%;
+    min-width: 630px;
 }
-nav ul, footer ul {
-    font-family:'Helvetica', 'Arial', 'Sans-Serif';
-    padding: 0px;
-    list-style: none;
-    font-weight: bold;
+
+#container {
+    padding-left: 200px;
+    padding-right: 190px;
 }
-nav ul li, footer ul li {
-    display: inline;
-    margin-right: 20px;
+
+#container .column {
+    position: relative;
+    float: left;
 }
-a {
-    text-decoration: none;
-    color: #999;
+
+#center {
+    padding: 10px 20px;
+    width: 100%;
 }
-a:hover {
-    text-decoration: underline;
+
+#left {
+    width: 180px;
+    padding: 0 10px;
+    right: 240px;
+    margin-left: -100%;
 }
-h1 {
-    font-size: 3em;
-    font-family:'Helvetica', 'Arial', 'Sans-Serif';
+
+#right {
+    width: 130px;
+    padding: 0 10px;
+    margin-right: -100%;
 }
+
+#footer {
+    clear: both;
+}
+
+/* IE hack */
+* html #left {
+    left: 150px;
+}
+
+/* Make the columns the same height as each other */
+#container {
+    overflow: hidden;
+}
+
+#container .column {
+    padding-bottom: 1001em;
+    margin-bottom: -1000em;
+}
+
+/* Fix for the footer */
+* html body {
+    overflow: hidden;
+}
+
+* html #footer-wrapper {
+    float: left;
+    position: relative;
+    width: 100%;
+    padding-bottom: 10010px;
+    margin-bottom: -10000px;
+    background: #fff;
+}
+
+/* Aesthetics */
+body {
+    margin: 0;
+    padding: 0;
+    font-family:Sans-serif;
+    line-height: 1.5em;
+}
+
 p {
-    font-size: 1.5em;
-    line-height: 1.4em;
-    color: #333;
-}
-footer {
-    border-top: 1px solid #d5d5d5;
-    font-size: .8em;
+    color: #555;
 }
 
-ul.posts { 
-    margin: 20px auto 40px; 
-    font-size: 1.5em;
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
 }
 
-ul.posts li {
-    list-style: none;
+nav ul a {
+    color: darkgreen;
+    text-decoration: none;
+}
+
+#header, #footer {
+    font-size: large;
+    padding: 0.3em;
+    background: #BCCE98;
+}
+
+#left {
+    background: #DAE9BC;
+}
+
+#right {
+    background: #F7FDEB;
+}
+
+#center {
+    background: #fff;
+}
+
+#container .column {
+    padding-top: 1em;
 }
